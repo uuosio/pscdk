@@ -6,6 +6,21 @@ class name:
     pass
 
 Name = Union[str, int, name]
+Uint32 = int
+Uint128 = int
+Uint64 = int
+
+def s2b(s: Union[str, bytes]) -> bytes:
+    '''
+    Convert a name in string to raw bytes
+    '''
+    pass
+
+def s2n(s: Union[str, bytes]):
+    '''
+    Convert a name in string to a 64 bits integer
+    '''
+    pass
 
 def action_new(account: Name, act_name: Name, actor: Name, permission: name):
     ''' Create a new action
@@ -19,10 +34,9 @@ def action_new(account: Name, act_name: Name, actor: Name, permission: name):
     '''
     pass
 
-def action_send(ptr, actor, permission):
+def action_send(ptr):
     '''Send a action
     '''
-
     pass
 
 def action_add_permission(ptr: int, actor: Name, permission: Name):
@@ -34,22 +48,140 @@ def action_add_permission(ptr: int, actor: Name, permission: Name):
     '''
     pass
 
-def action_free():
+def action_free(ptr: int):
     pass
 
-def assert_recover_key():
+def transaction_new(expiration: Uint32,
+                    ref_block_num: Uint32,
+                    ref_block_prefix: Uint32,
+                    max_net_usage_words: Uint32,
+                    max_cpu_usage_ms: Uint32,
+                    delay_sec: Uint32) -> int:
+    '''
+    Create a new transaction
+
+    Args:
+        expiration: Uint32,
+        ref_block_num: Uint32,
+        ref_block_prefix: Uint32,
+        max_net_usage_words: Uint32,
+        max_cpu_usage_ms: Uint32,
+        delay_sec: Uint32
+
+    Returns:
+        int: pointer to a C transaction struct 
+    '''
+
+def transaction_add_action(ptr: int, act_ptr: int):
+    '''
+    Add an action to transaction
+    '''
     pass
 
-def assert_ripemd160():
+def transaction_add_context_free_action(ptr: int, act_ptr: int):
+    '''
+    Add an context free action to transaction
+    '''
     pass
 
-def assert_sha1():
+def transaction_send(trx_ptr: Uint64, sender_id: Uint128, payer: Name, replace_existing: bool):
+    '''
+    Send a transaction
+    '''
     pass
 
-def assert_sha256():
+def transaction_cancel(sender_id: Uint128) -> bool:
+    '''
+    Cancel a transaction
+    '''
     pass
 
-def assert_sha512():
+def transaction_free(ptr: int):
+    '''
+    Release the memory of transaction
+    '''
+    pass
+
+def assert_recover_key(digest: bytes, sig: bytes, pub_key: bytes):
+    '''
+    Assertion for recover key
+    '''
+    pass
+
+def assert_ripemd160(data: bytes, hash: bytes):
+    '''
+    Assertion for ripemd160
+    
+    Args:
+        data: data to hash
+        hash: 20 bytes hash of ripemd160 
+    '''
+    pass
+
+def assert_sha1(data: bytes, hash: bytes):
+    '''
+    Assertion for sha1
+    
+    Args:
+        data: data to hash
+        hash: 20 bytes hash of sha1 
+    '''
+    pass
+
+def assert_sha256(data: bytes, hash: bytes):
+    '''
+    Assertion for sha256
+    
+    Args:
+        data: data to hash
+        hash: 32 bytes hash of sha256
+    '''
+    pass
+
+def assert_sha512(data: bytes, hash: bytes):
+    '''
+    Assertion for sha512
+    
+    Args:
+        data: data to hash
+        hash: 64 bytes hash of sha512
+    '''
+    pass
+
+def ripemd160(data: Union[str, bytes]) -> bytes:
+    '''
+    ripemd160 hash of data
+
+    Returns:
+        20 bytes hash
+    '''
+    pass
+
+def sha1(data: Union[str, bytes]) -> bytes:
+    '''
+    hash of sha1
+
+    Returns:
+        20 bytes of sha1 hash
+    '''
+    pass
+
+def sha256(data: Union[str, bytes]) -> bytes:
+    '''
+    hash of sha256
+
+    Returns:
+        32 bytes of sha256 hash
+    '''
+    pass
+
+def sha512(data: Union[str, bytes]):
+    '''
+    hash of sha512
+
+    Returns:
+        64 bytes of sha512 hash
+    '''
     pass
 
 def call_contract():
@@ -262,15 +394,6 @@ def require_auth2():
 def require_recipient():
     pass
 
-def ripemd160():
-    pass
-
-def s2b():
-    pass
-
-def s2n():
-    pass
-
 def send_context_free_inline():
     pass
 
@@ -301,15 +424,6 @@ def set_proposed_producers():
 def set_resource_limits():
     pass
 
-def sha1():
-    pass
-
-def sha256():
-    pass
-
-def sha512():
-    pass
-
 def tapos_block_num():
     pass
 
@@ -332,24 +446,6 @@ def token_retire():
     pass
 
 def token_transfer():
-    pass
-
-def transaction_add_action():
-    pass
-
-def transaction_add_context_free_action():
-    pass
-
-def transaction_cancel():
-    pass
-
-def transaction_free():
-    pass
-
-def transaction_new():
-    pass
-
-def transaction_send():
     pass
 
 def uuos_assert():
