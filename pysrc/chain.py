@@ -10,15 +10,18 @@ Uint32 = int
 Uint128 = int
 Uint64 = int
 
-def s2b(s: Union[str, bytes]) -> bytes:
+def n2s(n: int) -> str:
+    '''Convert a integer to string
     '''
-    Convert a name in string to raw bytes
+    pass
+
+def s2b(s: Union[str, bytes]) -> bytes:
+    '''Convert a name in string to raw bytes
     '''
     pass
 
 def s2n(s: Union[str, bytes]):
-    '''
-    Convert a name in string to a 64 bits integer
+    '''Convert a name in string to a 64 bits integer
     '''
     pass
 
@@ -41,6 +44,7 @@ def action_send(ptr):
 
 def action_add_permission(ptr: int, actor: Name, permission: Name):
     '''Add a permission to action
+
     Args:
         ptr: int
         actor: Name
@@ -57,8 +61,7 @@ def transaction_new(expiration: Uint32,
                     max_net_usage_words: Uint32,
                     max_cpu_usage_ms: Uint32,
                     delay_sec: Uint32) -> int:
-    '''
-    Create a new transaction
+    '''Create a new transaction
 
     Args:
         expiration: Uint32,
@@ -73,58 +76,58 @@ def transaction_new(expiration: Uint32,
     '''
 
 def transaction_add_action(ptr: int, act_ptr: int):
-    '''
-    Add an action to transaction
+    '''Add an action to transaction
     '''
     pass
 
 def transaction_add_context_free_action(ptr: int, act_ptr: int):
-    '''
-    Add an context free action to transaction
+    '''Add an context free action to transaction
     '''
     pass
 
 def transaction_send(trx_ptr: Uint64, sender_id: Uint128, payer: Name, replace_existing: bool):
-    '''
-    Send a transaction
+    '''Send a transaction
     '''
     pass
 
 def transaction_cancel(sender_id: Uint128) -> bool:
-    '''
-    Cancel a transaction
+    '''Cancel a transaction
     '''
     pass
 
 def transaction_free(ptr: int):
-    '''
-    Release the memory of transaction
+    '''Release the memory of transaction
     '''
     pass
 
 def expiration():
-    '''
-    Gets the expiration of the currently executing transaction in seconds.
+    '''Gets the expiration of the currently executing transaction in seconds.
     '''
     pass
 
 def get_action(_type: int, index: int) -> bytes:
     '''Retrieves the indicated action from the active transaction.
+
     Args:
         type: int - 0 for context free action, 1 for action
         index: int - the index of the requested action
     '''
     pass
 
-def assert_recover_key(digest: bytes, sig: bytes, pub_key: bytes):
+def get_context_free_data(index: int):
+    '''Retrieve the signed_transaction.context_free_data[index].
+    Args:
+        index: int - the index of the context_free_data entry to retrieve
     '''
-    Assertion for recover key
+    pass
+
+def assert_recover_key(digest: bytes, sig: bytes, pub_key: bytes):
+    '''Assertion for recover key
     '''
     pass
 
 def assert_ripemd160(data: bytes, hash: bytes):
-    '''
-    Assertion for ripemd160
+    '''Assertion for ripemd160
     
     Args:
         data: data to hash
@@ -133,8 +136,7 @@ def assert_ripemd160(data: bytes, hash: bytes):
     pass
 
 def assert_sha1(data: bytes, hash: bytes):
-    '''
-    Assertion for sha1
+    '''Assertion for sha1
     
     Args:
         data: data to hash
@@ -143,8 +145,7 @@ def assert_sha1(data: bytes, hash: bytes):
     pass
 
 def assert_sha256(data: bytes, hash: bytes):
-    '''
-    Assertion for sha256
+    '''Assertion for sha256
     
     Args:
         data: data to hash
@@ -153,8 +154,7 @@ def assert_sha256(data: bytes, hash: bytes):
     pass
 
 def assert_sha512(data: bytes, hash: bytes):
-    '''
-    Assertion for sha512
+    '''Assertion for sha512
     
     Args:
         data: data to hash
@@ -163,8 +163,7 @@ def assert_sha512(data: bytes, hash: bytes):
     pass
 
 def ripemd160(data: Union[str, bytes]) -> bytes:
-    '''
-    ripemd160 hash of data
+    '''ripemd160 hash of data
 
     Returns:
         20 bytes hash
@@ -172,8 +171,7 @@ def ripemd160(data: Union[str, bytes]) -> bytes:
     pass
 
 def sha1(data: Union[str, bytes]) -> bytes:
-    '''
-    hash of sha1
+    '''Hash of sha1
 
     Returns:
         20 bytes of sha1 hash
@@ -181,8 +179,7 @@ def sha1(data: Union[str, bytes]) -> bytes:
     pass
 
 def sha256(data: Union[str, bytes]) -> bytes:
-    '''
-    hash of sha256
+    '''Hash of sha256
 
     Returns:
         32 bytes of sha256 hash
@@ -190,8 +187,7 @@ def sha256(data: Union[str, bytes]) -> bytes:
     pass
 
 def sha512(data: Union[str, bytes]):
-    '''
-    hash of sha512
+    '''Hash of sha512
 
     Returns:
         64 bytes of sha512 hash
@@ -199,8 +195,7 @@ def sha512(data: Union[str, bytes]):
     pass
 
 def call_contract(contract: Name, args: bytes):
-    '''
-    call a function in contract
+    '''Call a function in contract
 
     Args:
         contract: Name,
@@ -209,33 +204,38 @@ def call_contract(contract: Name, args: bytes):
     pass
 
 def current_receiver() -> name:
-    '''
-    Get current receiver of action
+    '''Get current receiver of action
     '''
     pass
 
 def current_time() -> int:
-    '''
-    Get current block time in microseconds
+    '''Get current block time in microseconds
     '''
     pass
 
 def enable_log():
+    '''Enable logging via print
+    '''
     pass
 
-def get_active_producers():
+def get_active_producers() -> Tuple[str]:
+    '''Gets the set of active producers.
+    '''
     pass
 
 def get_blockchain_parameters():
+    '''Retrieve the blolckchain parameters
+    '''
     pass
 
-def get_code_hash():
+def get_code_hash(contract: Name):
+    '''Get code hash of a contract
+    '''
     pass
 
-def get_code_version():
-    pass
-
-def get_context_free_data():
+def get_code_version(contract: Name):
+    '''Get code version of a contract
+    '''
     pass
 
 def get_log():
@@ -251,54 +251,6 @@ def is_account():
     pass
 
 def is_privileged():
-    pass
-
-def kv_erase():
-    pass
-
-def kv_get():
-    pass
-
-def kv_get_data():
-    pass
-
-def kv_it_compare():
-    pass
-
-def kv_it_create():
-    pass
-
-def kv_it_destroy():
-    pass
-
-def kv_it_key():
-    pass
-
-def kv_it_key_compare():
-    pass
-
-def kv_it_lower_bound():
-    pass
-
-def kv_it_move_to_end():
-    pass
-
-def kv_it_next():
-    pass
-
-def kv_it_prev():
-    pass
-
-def kv_it_status():
-    pass
-
-def kv_it_value():
-    pass
-
-def kv_set():
-    pass
-
-def n2s():
     pass
 
 def publication_time():
@@ -376,7 +328,9 @@ def token_retire():
 def token_transfer():
     pass
 
-def uuos_assert():
+def uuos_assert(condition: bool, msg: str):
+    '''assertion on condition
+    '''
     pass
 
 def uuos_assert_code():
