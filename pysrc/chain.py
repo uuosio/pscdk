@@ -102,6 +102,20 @@ def transaction_free(ptr: int):
     '''
     pass
 
+def expiration():
+    '''
+    Gets the expiration of the currently executing transaction in seconds.
+    '''
+    pass
+
+def get_action(_type: int, index: int) -> bytes:
+    '''Retrieves the indicated action from the active transaction.
+    Args:
+        type: int - 0 for context free action, 1 for action
+        index: int - the index of the requested action
+    '''
+    pass
+
 def assert_recover_key(digest: bytes, sig: bytes, pub_key: bytes):
     '''
     Assertion for recover key
@@ -184,115 +198,29 @@ def sha512(data: Union[str, bytes]):
     '''
     pass
 
-def call_contract():
+def call_contract(contract: Name, args: bytes):
+    '''
+    call a function in contract
+
+    Args:
+        contract: Name,
+        args: bytes
+    '''
     pass
 
-def current_receiver():
+def current_receiver() -> name:
+    '''
+    Get current receiver of action
+    '''
     pass
 
-def current_time():
-    pass
-
-def db_end_i256():
-    pass
-
-def db_end_i64():
-    pass
-
-def db_find_i256():
-    pass
-
-def db_find_i64():
-    pass
-
-def db_get_i256():
-    pass
-
-def db_get_i64():
-    pass
-
-def db_get_table_row_count():
-    pass
-
-def db_idx_end():
-    pass
-
-def db_idx_find_primary():
-    pass
-
-def db_idx_find_secondary():
-    pass
-
-def db_idx_lowerbound():
-    pass
-
-def db_idx_next():
-    pass
-
-def db_idx_previous():
-    pass
-
-def db_idx_remove():
-    pass
-
-def db_idx_store():
-    pass
-
-def db_idx_update():
-    pass
-
-def db_idx_upperbound():
-    pass
-
-def db_lowerbound_i256():
-    pass
-
-def db_lowerbound_i64():
-    pass
-
-def db_next_i256():
-    pass
-
-def db_next_i64():
-    pass
-
-def db_previous_i256():
-    pass
-
-def db_previous_i64():
-    pass
-
-def db_remove_i256():
-    pass
-
-def db_remove_i64():
-    pass
-
-def db_store_i256():
-    pass
-
-def db_store_i64():
-    pass
-
-def db_update_i256():
-    pass
-
-def db_update_i64():
-    pass
-
-def db_upperbound_i256():
-    pass
-
-def db_upperbound_i64():
+def current_time() -> int:
+    '''
+    Get current block time in microseconds
+    '''
     pass
 
 def enable_log():
-    pass
-
-def expiration():
-    pass
-
-def get_action():
     pass
 
 def get_active_producers():
