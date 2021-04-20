@@ -219,6 +219,8 @@ def enable_log():
     pass
 
 def get_log():
+    '''get all log of print
+    '''
     pass
 
 def get_active_producers() -> Tuple[str]:
