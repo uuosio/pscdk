@@ -1,1 +1,1 @@
-# python-contract-dev-kit
+# python-contracts-dev-kit

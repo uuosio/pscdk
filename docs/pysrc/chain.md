@@ -1,8 +1,8 @@
 # Chain
 
-> Auto-generated documentation for [pysrc.chain](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py) module.
+> Auto-generated documentation for [pysrc.chain](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py) module.
 
-- [Python-contract-dev-kit](../README.md#python-contract-dev-kit) / [Modules](../MODULES.md#python-contract-dev-kit-modules) / [Pysrc](index.md#pysrc) / Chain
+- [Python-contract-dev-kit](../README.md#python-contracts-dev-kit) / [Modules](../MODULES.md#python-contract-dev-kit-modules) / [Pysrc](index.md#pysrc) / Chain
     - [name](#name)
     - [action_add_permission](#action_add_permission)
     - [action_free](#action_free)
@@ -72,7 +72,7 @@
 
 ## name
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L5)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L5)
 
 ```python
 class name():
@@ -80,7 +80,7 @@ class name():
 
 ## action_add_permission
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L45)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L45)
 
 ```python
 def action_add_permission(ptr: int, actor: Name, permission: Name):
@@ -100,7 +100,7 @@ Add a permission to action
 
 ## action_free
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L55)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L55)
 
 ```python
 def action_free(ptr: int):
@@ -108,7 +108,7 @@ def action_free(ptr: int):
 
 ## action_new
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L28)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L28)
 
 ```python
 def action_new(account: Name, act_name: Name, actor: Name, permission: name):
@@ -125,7 +125,7 @@ Create a new action
 
 #### Returns
 
-pointer to a action struct
+pointer to an action struct
 
 #### See also
 
@@ -134,17 +134,17 @@ pointer to a action struct
 
 ## action_send
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L40)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L40)
 
 ```python
 def action_send(ptr):
 ```
 
-Send a action
+Send an action
 
 ## assert_recover_key
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L124)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L124)
 
 ```python
 def assert_recover_key(digest: bytes, sig: bytes, pub_key: bytes):
@@ -154,7 +154,7 @@ Assertion for recover key
 
 ## assert_ripemd160
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L129)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L129)
 
 ```python
 def assert_ripemd160(data: bytes, hash: bytes):
@@ -169,7 +169,7 @@ Assertion for ripemd160
 
 ## assert_sha1
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L138)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L138)
 
 ```python
 def assert_sha1(data: bytes, hash: bytes):
@@ -184,7 +184,7 @@ Assertion for sha1
 
 ## assert_sha256
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L147)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L147)
 
 ```python
 def assert_sha256(data: bytes, hash: bytes):
@@ -199,7 +199,7 @@ Assertion for sha256
 
 ## assert_sha512
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L156)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L156)
 
 ```python
 def assert_sha512(data: bytes, hash: bytes):
@@ -214,7 +214,7 @@ Assertion for sha512
 
 ## call_contract
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L197)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L197)
 
 ```python
 def call_contract(contract: Name, args: bytes):
@@ -233,7 +233,7 @@ Call a function in contract
 
 ## current_receiver
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L206)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L206)
 
 ```python
 def current_receiver() -> name:
@@ -247,7 +247,7 @@ Get current receiver of action
 
 ## current_time
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L211)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L211)
 
 ```python
 def current_time() -> int:
@@ -257,7 +257,7 @@ Get current block time in microseconds
 
 ## enable_log
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L216)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L216)
 
 ```python
 def enable_log():
@@ -267,7 +267,7 @@ Enable logging via print
 
 ## expiration
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L103)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L103)
 
 ```python
 def expiration():
@@ -277,7 +277,7 @@ Gets the expiration of the currently executing transaction in seconds.
 
 ## get_action
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L108)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L108)
 
 ```python
 def get_action(_type: int, index: int) -> bytes:
@@ -292,7 +292,7 @@ Retrieves the indicated action from the active transaction.
 
 ## get_active_producers
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L224)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L226)
 
 ```python
 def get_active_producers() -> Tuple[str]:
@@ -302,7 +302,7 @@ Gets the set of active producers.
 
 ## get_blockchain_parameters
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L229)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L231)
 
 ```python
 def get_blockchain_parameters():
@@ -312,7 +312,7 @@ Retrieve the blolckchain parameters
 
 ## get_code_hash
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L234)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L236)
 
 ```python
 def get_code_hash(contract: Name):
@@ -326,7 +326,7 @@ Get code hash of a contract
 
 ## get_code_version
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L239)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L241)
 
 ```python
 def get_code_version(contract: Name):
@@ -340,7 +340,7 @@ Get code version of a contract
 
 ## get_context_free_data
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L117)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L117)
 
 ```python
 def get_context_free_data(index: int):
@@ -354,15 +354,17 @@ Retrieve the signed_transaction.context_free_data[index].
 
 ## get_log
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L221)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L221)
 
 ```python
 def get_log():
 ```
 
+get all log of print
+
 ## get_resource_limits
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L244)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L246)
 
 ```python
 def get_resource_limits(account: Name):
@@ -380,7 +382,7 @@ Get the resource limits of an account
 
 ## has_auth
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L252)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L254)
 
 ```python
 def has_auth(account: Name):
@@ -394,7 +396,7 @@ Verifies that account name has auth.
 
 ## is_account
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L257)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L259)
 
 ```python
 def is_account(account: Name):
@@ -412,7 +414,7 @@ True for account exists, False for account not exists.
 
 ## is_privileged
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L264)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L266)
 
 ```python
 def is_privileged(account: Name):
@@ -426,7 +428,7 @@ Check if an account is privileged
 
 ## n2s
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L13)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L13)
 
 ```python
 def n2s(n: int) -> str:
@@ -436,7 +438,7 @@ Convert a integer to string
 
 ## publication_time
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L269)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L271)
 
 ```python
 def publication_time():
@@ -446,7 +448,7 @@ Retrive the publication time
 
 ## read_action_data
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L274)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L276)
 
 ```python
 def read_action_data() -> bytes:
@@ -460,7 +462,7 @@ Retrive data in an action
 
 ## read_transaction
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L282)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L284)
 
 ```python
 def read_transaction():
@@ -470,7 +472,7 @@ Read raw transaction
 
 ## recover_key
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L287)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L289)
 
 ```python
 def recover_key(digest: bytes, sig: bytes):
@@ -485,7 +487,7 @@ digest (bytes) : 32 bytes hash of sha256
 
 ## require_auth
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L295)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L297)
 
 ```python
 def require_auth(account: Name):
@@ -499,7 +501,7 @@ Verifies that account exists in the set of provided auths on a action. Throws if
 
 ## require_auth2
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L300)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L302)
 
 ```python
 def require_auth2(account: Name, permission: Name):
@@ -513,7 +515,7 @@ Verifies that account name exists in the set of provided auths on a action. Thro
 
 ## require_recipient
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L305)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L307)
 
 ```python
 def require_recipient(contract: Name):
@@ -527,7 +529,7 @@ Send notify to contract
 
 ## ripemd160
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L165)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L165)
 
 ```python
 def ripemd160(data: Union[str, bytes]) -> bytes:
@@ -541,7 +543,7 @@ ripemd160 hash of data
 
 ## s2b
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L18)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L18)
 
 ```python
 def s2b(s: Union[str, bytes]) -> bytes:
@@ -551,7 +553,7 @@ Convert a name in string to raw bytes
 
 ## s2n
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L23)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L23)
 
 ```python
 def s2n(s: Union[str, bytes]):
@@ -561,7 +563,7 @@ Convert a name in string to a 64 bits integer
 
 ## send_context_free_inline
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L310)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L312)
 
 ```python
 def send_context_free_inline(account: Name, action: Name, data: bytes):
@@ -575,7 +577,7 @@ send inline context free action
 
 ## send_context_free_inline_raw
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L315)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L317)
 
 ```python
 def send_context_free_inline_raw(data):
@@ -585,7 +587,7 @@ Send raw context free inline action
 
 ## send_inline
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L320)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L322)
 
 ```python
 def send_inline(
@@ -605,7 +607,7 @@ Send inline action
 
 ## send_inline_raw
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L325)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L327)
 
 ```python
 def send_inline_raw(data):
@@ -615,7 +617,7 @@ send raw inline action
 
 ## set_action_return_value
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L330)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L332)
 
 ```python
 def set_action_return_value(data):
@@ -625,7 +627,7 @@ set return value of action
 
 ## set_blockchain_parameters
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L335)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L337)
 
 ```python
 def set_blockchain_parameters(parameters: Tuple[int]):
@@ -655,7 +657,7 @@ struct blockchain_parameters {
 
 ## set_kv_parameters_packed
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L361)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L363)
 
 ```python
 def set_kv_parameters_packed():
@@ -663,7 +665,7 @@ def set_kv_parameters_packed():
 
 ## set_privileged
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L364)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L366)
 
 ```python
 def set_privileged(account: Name, is_priv: bool):
@@ -677,7 +679,7 @@ Set the privileged status of an account
 
 ## set_proposed_producers
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L369)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L371)
 
 ```python
 def set_proposed_producers(producers: List[Name]):
@@ -687,7 +689,7 @@ Proposes a schedule change, once the block that contains the proposal becomes ir
 
 ## set_resource_limits
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L374)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L376)
 
 ```python
 def set_resource_limits(
@@ -706,7 +708,7 @@ Set the resource limits of an account
 
 ## sha1
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L173)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L173)
 
 ```python
 def sha1(data: Union[str, bytes]) -> bytes:
@@ -720,7 +722,7 @@ Hash of sha1
 
 ## sha256
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L181)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L181)
 
 ```python
 def sha256(data: Union[str, bytes]) -> bytes:
@@ -734,7 +736,7 @@ Hash of sha256
 
 ## sha512
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L189)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L189)
 
 ```python
 def sha512(data: Union[str, bytes]):
@@ -748,7 +750,7 @@ Hash of sha512
 
 ## tapos_block_num
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L379)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L381)
 
 ```python
 def tapos_block_num() -> int:
@@ -758,7 +760,7 @@ Gets the block number used for TAPOS on the currently executing transaction.
 
 ## tapos_block_prefix
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L384)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L386)
 
 ```python
 def tapos_block_prefix() -> int:
@@ -768,7 +770,7 @@ Gets the block prefix used for TAPOS on the currently executing transaction.
 
 ## token_close
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L425)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L427)
 
 ```python
 def token_close(owner: Name, symbol: int):
@@ -782,7 +784,7 @@ Close a token
 
 ## token_create
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L399)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L401)
 
 ```python
 def token_create(issuer: Name, maximum_supply: int, sym: int):
@@ -796,7 +798,7 @@ Create a token
 
 ## token_issue
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L404)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L406)
 
 ```python
 def token_issue(to: Name, quantity: int, sym: int, memo: str):
@@ -810,7 +812,7 @@ Issue aa token
 
 ## token_open
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L414)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L416)
 
 ```python
 def token_open(owner: Name, symbol: int, ram_payer: Name):
@@ -824,7 +826,7 @@ Open a token
 
 ## token_retire
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L419)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L421)
 
 ```python
 def token_retire(amount: int, symbol: int, memo: str):
@@ -834,7 +836,7 @@ Retire a token
 
 ## token_transfer
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L409)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L411)
 
 ```python
 def token_transfer(_from: Name, to: Name, quantity: int, sym: int, memo: str):
@@ -848,7 +850,7 @@ Transfer a token
 
 ## transaction_add_action
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L78)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L78)
 
 ```python
 def transaction_add_action(ptr: int, act_ptr: int):
@@ -858,7 +860,7 @@ Add an action to transaction
 
 ## transaction_add_context_free_action
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L83)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L83)
 
 ```python
 def transaction_add_context_free_action(ptr: int, act_ptr: int):
@@ -868,7 +870,7 @@ Add an context free action to transaction
 
 ## transaction_cancel
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L93)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L93)
 
 ```python
 def transaction_cancel(sender_id: Uint128) -> bool:
@@ -882,7 +884,7 @@ Cancel a transaction
 
 ## transaction_free
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L98)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L98)
 
 ```python
 def transaction_free(ptr: int):
@@ -892,7 +894,7 @@ Release the memory of transaction
 
 ## transaction_new
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L58)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L58)
 
 ```python
 def transaction_new(
@@ -926,7 +928,7 @@ Create a new transaction
 
 ## transaction_send
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L88)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L88)
 
 ```python
 def transaction_send(
@@ -947,7 +949,7 @@ Send a transaction
 
 ## uuos_assert
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L389)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L391)
 
 ```python
 def uuos_assert(test: bool, msg: str):
@@ -957,7 +959,7 @@ raise exception if test is false
 
 ## uuos_assert_code
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/chain.py#L394)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/chain.py#L396)
 
 ```python
 def uuos_assert_code(test: bool, code: int):

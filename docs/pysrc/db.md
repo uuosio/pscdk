@@ -1,8 +1,8 @@
 # Db
 
-> Auto-generated documentation for [pysrc.db](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py) module.
+> Auto-generated documentation for [pysrc.db](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py) module.
 
-- [Python-contract-dev-kit](../README.md#python-contract-dev-kit) / [Modules](../MODULES.md#python-contract-dev-kit-modules) / [Pysrc](index.md#pysrc) / Db
+- [Python-contract-dev-kit](../README.md#python-contracts-dev-kit) / [Modules](../MODULES.md#python-contract-dev-kit-modules) / [Pysrc](index.md#pysrc) / Db
     - [ChainDB](#chaindb)
         - [ChainDB().find](#chaindbfind)
         - [ChainDB().get](#chaindbget)
@@ -34,7 +34,7 @@
 
 ## ChainDB
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L17)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L17)
 
 ```python
 class ChainDB(object):
@@ -53,7 +53,7 @@ class ChainDB(object):
 
 ### ChainDB().find
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L42)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L42)
 
 ```python
 def find(primary_key: int):
@@ -61,7 +61,7 @@ def find(primary_key: int):
 
 ### ChainDB().get
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L45)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L45)
 
 ```python
 def get(itr: int):
@@ -69,7 +69,7 @@ def get(itr: int):
 
 ### ChainDB().load
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L63)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L63)
 
 ```python
 def load(primary_key: int):
@@ -77,7 +77,7 @@ def load(primary_key: int):
 
 ### ChainDB().lower_bound
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L60)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L60)
 
 ```python
 def lower_bound(primary: int):
@@ -85,7 +85,7 @@ def lower_bound(primary: int):
 
 ### ChainDB().remove
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L77)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L77)
 
 ```python
 def remove(primary_key: int):
@@ -93,7 +93,7 @@ def remove(primary_key: int):
 
 ### ChainDB().remove_by_itr
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L86)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L86)
 
 ```python
 def remove_by_itr(itr: int):
@@ -101,7 +101,7 @@ def remove_by_itr(itr: int):
 
 ### ChainDB().store
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L69)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L69)
 
 ```python
 def store(obj):
@@ -109,7 +109,7 @@ def store(obj):
 
 ### ChainDB().upper_bound
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L54)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L54)
 
 ```python
 def upper_bound(primary: int):
@@ -117,7 +117,7 @@ def upper_bound(primary: int):
 
 ## ChainDBKey256
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L93)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L93)
 
 ```python
 class ChainDBKey256(ChainDB):
@@ -130,7 +130,7 @@ class ChainDBKey256(ChainDB):
 
 ## ChainDBKey64
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L89)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L89)
 
 ```python
 class ChainDBKey64(ChainDB):
@@ -143,7 +143,7 @@ class ChainDBKey64(ChainDB):
 
 ## MultiIndex
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L97)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L97)
 
 ```python
 class MultiIndex():
@@ -152,7 +152,7 @@ class MultiIndex():
 
 ### MultiIndex().find
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L110)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L110)
 
 ```python
 def find(primary_key):
@@ -160,7 +160,7 @@ def find(primary_key):
 
 ### MultiIndex().get
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L113)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L113)
 
 ```python
 def get(itr):
@@ -168,7 +168,7 @@ def get(itr):
 
 ### MultiIndex().get_secondary_index
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L205)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L205)
 
 ```python
 def get_secondary_index(idx):
@@ -176,7 +176,7 @@ def get_secondary_index(idx):
 
 ### MultiIndex().get_secondary_values
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L119)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L119)
 
 ```python
 def get_secondary_values(primary_key):
@@ -184,7 +184,7 @@ def get_secondary_values(primary_key):
 
 ### MultiIndex().idx_find
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L214)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L214)
 
 ```python
 def idx_find(index, secondary_key):
@@ -192,7 +192,7 @@ def idx_find(index, secondary_key):
 
 ### MultiIndex().idx_lower_bound
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L223)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L223)
 
 ```python
 def idx_lower_bound(index, secondary_key):
@@ -200,7 +200,7 @@ def idx_lower_bound(index, secondary_key):
 
 ### MultiIndex().idx_upper_bound
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L218)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L218)
 
 ```python
 def idx_upper_bound(index, secondary_key):
@@ -208,7 +208,7 @@ def idx_upper_bound(index, secondary_key):
 
 ### MultiIndex().load
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L141)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L141)
 
 ```python
 def load(primary_key):
@@ -216,7 +216,7 @@ def load(primary_key):
 
 ### MultiIndex().lower_bound
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L211)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L211)
 
 ```python
 def lower_bound(primary):
@@ -224,7 +224,7 @@ def lower_bound(primary):
 
 ### MultiIndex().remove
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L168)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L168)
 
 ```python
 def remove(primary_key):
@@ -232,7 +232,7 @@ def remove(primary_key):
 
 ### MultiIndex().store
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L147)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L147)
 
 ```python
 def store(obj):
@@ -240,7 +240,7 @@ def store(obj):
 
 ### MultiIndex().upper_bound
 
-[[find in source code]](https://github.com/uuosio/python-contract-dev-kit/blob/master/pysrc/db.py#L208)
+[[find in source code]](https://github.com/uuosio/python-contracts-dev-kit/blob/master/pysrc/db.py#L208)
 
 ```python
 def upper_bound(primary):

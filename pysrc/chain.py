@@ -1,7 +1,7 @@
-#dummy module for buildin chain module
+#dummy module for builtin chain module
 from typing import Union, List, Tuple
 
-# buildin name object
+# builtin name object
 class name:
     pass
 
@@ -33,12 +33,12 @@ def action_new(account: Name, act_name: Name, actor: Name, permission: name):
         actor: Name
         permission: name
     Returns:
-        pointer to a action struct 
+        pointer to an action struct 
     '''
     pass
 
 def action_send(ptr):
-    '''Send a action
+    '''Send an action
     '''
     pass
 

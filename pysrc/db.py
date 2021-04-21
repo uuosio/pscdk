@@ -224,3 +224,7 @@ class MultiIndex:
         idx = self.indexes[index]
         idx_table = self.idx_tables[index]
         return chain.db_idx_lowerbound(idx, self.code, self.scope, idx_table, secondary_key)
+
+def _say_hello(msg):
+    print('++++hello,world')
+

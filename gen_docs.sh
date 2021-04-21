@@ -1,1 +1,1 @@
-handsdown pysrc --external https://github.com/uuosio/python-contract-dev-kit
+handsdown pysrc --external https://github.com/uuosio/python-contracts-dev-kit
