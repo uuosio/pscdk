@@ -1,8 +1,8 @@
 # Python Smart Contract Development Kit
 
-# [Documentation](https://uuosio.github.io/uuosio.pscdk)
+### [Documentation](https://uuosio.github.io/uuosio.pscdk)
 
-# Python Smart Contracts Example
+### Python Smart Contracts Example
 
 ```python
 import json
@@ -52,3 +52,6 @@ def apply(receiver, first_receiver, action):
     data = storage.load(primary_key)
     print(data)
 ```
+
+### License
+[MIT](./LICENSE)
