@@ -5,7 +5,7 @@
 ### Quick Start
 ```python
 import os
-from uuoskit import uuosapi, wallet
+from uuoskit import uuosapi, wallet, config
 from uuoskit.exceptions import ChainException
 
 if os.path.exists('mywallet.wallet'):
@@ -19,20 +19,22 @@ code = '''
 import chain
 def apply(a, b, c):
     data = chain.read_action_data()
-    print(data)
+    print('++++action data:', data)
 '''
 
 account = 'helloworld11'
+config.python_contract = account
 code = uuosapi.mp_compile(account, code)
-try:
-    uuosapi.deploy_python_contract(account, code, '')
-except ChainException as e:
-    print(e.json['error']['what'])
-r = uuosapi.push_action(account, 'sayhello', b'hello,world', {account:'active'})
-r['processed']['action_traces'][0]['console']
+
+uuosapi.deploy_python_contract(account, code, b'')
+
+r = uuosapi.push_action(account, 'sayhello', b'hellooo,world', {account:'active'})
+console = r['processed']['action_traces'][0]['console']
+print(console)
 
 r = uuosapi.push_action(account, 'sayhello', b'goodbye,world', {account:'active'})
-r['processed']['action_traces'][0]['console']
+console = r['processed']['action_traces'][0]['console']
+print(console)
 ```
 
 ### Python Smart Contracts Example
