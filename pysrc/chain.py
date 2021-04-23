@@ -11,7 +11,7 @@ Uint128 = int
 Uint64 = int
 
 def n2s(n: int) -> str:
-    '''Convert a integer to string
+    '''Convert an integer to string
     '''
     pass
 
@@ -53,6 +53,8 @@ def action_add_permission(ptr: int, actor: Name, permission: Name):
     pass
 
 def action_free(ptr: int):
+    '''Free action memory
+    '''
     pass
 
 def transaction_new(expiration: Uint32,
@@ -219,7 +221,7 @@ def enable_log():
     pass
 
 def get_log():
-    '''get all log of print
+    '''Get all log of print
     '''
     pass
 
@@ -310,7 +312,7 @@ def require_recipient(contract: Name):
     pass
 
 def send_context_free_inline(account: Name, action: Name, data: bytes):
-    '''send inline context free action
+    '''Send inline context free action
     '''
     pass
 
@@ -325,12 +327,12 @@ def send_inline(account: Name, action: Name, actor: Name, permission: Name, data
     pass
 
 def send_inline_raw(data):
-    '''send raw inline action
+    '''Send raw inline action
     '''
     pass
 
 def set_action_return_value(data):
-    '''set return value of action
+    '''Set return value of action
     '''
     pass
 
@@ -389,12 +391,12 @@ def tapos_block_prefix() -> int:
     pass
 
 def uuos_assert(test: bool, msg: str):
-    '''raise exception if test is false
+    '''Raise exception if test is false
     '''
     pass
 
 def uuos_assert_code(test: bool, code: int):
-    '''raise exception with code if test is false
+    '''Raise exception with code if test is false
     '''
     pass
 
@@ -404,7 +406,7 @@ def token_create(issuer: Name, maximum_supply: int, sym: int):
     pass
 
 def token_issue(to: Name, quantity: int, sym: int, memo: str):
-    '''Issue aa token
+    '''Issue a token
     '''
     pass
 

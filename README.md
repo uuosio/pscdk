@@ -1,6 +1,39 @@
-# Python Smart Contract Development Kit
+# Python Smart Contracts Development Kit
 
 ### [Documentation](https://uuosio.github.io/uuosio.pscdk)
+
+### Quick Start
+```python
+import os
+from uuoskit import uuosapi, wallet
+from uuoskit.exceptions import ChainException
+
+if os.path.exists('mywallet.wallet'):
+    os.remove('mywallet.wallet')
+psw = wallet.create('mywallet')
+
+wallet.import_key('mywallet', '5Jbb4wuwz8MAzTB9FJNmrVYGXo4ABb7wqPVoWGcZ6x8V2FwNeDo')
+
+uuosapi.set_node('https://testnode.uuos.network:8443')
+code = '''
+import chain
+def apply(a, b, c):
+    data = chain.read_action_data()
+    print(data)
+'''
+
+account = 'helloworld11'
+code = uuosapi.mp_compile(account, code)
+try:
+    uuosapi.deploy_python_contract(account, code, '')
+except ChainException as e:
+    print(e.json['error']['what'])
+r = uuosapi.push_action(account, 'sayhello', b'hello,world', {account:'active'})
+r['processed']['action_traces'][0]['console']
+
+r = uuosapi.push_action(account, 'sayhello', b'goodbye,world', {account:'active'})
+r['processed']['action_traces'][0]['console']
+```
 
 ### Python Smart Contracts Example
 
@@ -19,11 +52,11 @@ class MyDataI64(object):
         self.payer = 0
 
     def pack(self):
-        return struct.pack('lllf', self.a, self.b, self.c, self.d)
+        return struct.pack('llld', self.a, self.b, self.c, self.d)
 
     @classmethod
     def unpack(cls, data):
-        data = struct.unpack('lllf', data)
+        data = struct.unpack('llld', data)
         return cls(data[0], data[1], data[2], data[3])
 
     def get_primary_key(self):

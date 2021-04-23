@@ -207,12 +207,10 @@ def apply(receiver, first_receiver, action):
 
 # Storage
 ```python
-import db
 import json
+import struct
 import chain
-
-def get_scope():
-    return name(chain.read_action_data()[:8])
+import db
 
 class MyDataI64(object):
     def __init__(self, a: int, b: int, c: int, d: float):
@@ -223,12 +221,11 @@ class MyDataI64(object):
         self.payer = 0
 
     def pack(self):
-        data = (self.a, self.b, self.c, self.d)
-        return json.dumps(data)
+        return struct.pack('llld', self.a, self.b, self.c, self.d)
 
     @classmethod
     def unpack(cls, data):
-        data = json.loads(data)
+        data = struct.unpack('llld', data)
         return cls(data[0], data[1], data[2], data[3])
 
     def get_primary_key(self):
@@ -240,7 +237,7 @@ class MyDataI64(object):
 
 def apply(receiver, first_receiver, action):
     code = receiver
-    scope = get_scope()
+    scope = name('scope')
     table = name('table3')
     payer = receiver
 
